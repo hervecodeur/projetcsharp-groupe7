@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A11CE69-48FC-48D1-A8C2-26467D2F175E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pressing</RootNamespace>
+    <AssemblyName>pressing</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\Client.cs" />
+    <Compile Include="classes\Employe.cs" />
+    <Compile Include="classes\Service.cs" />
+    <Compile Include="client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client.Designer.cs">
+      <DependentUpon>client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connection.cs" />
+    <Compile Include="dao\ClientDao.cs" />
+    <Compile Include="dao\EmployeDAO.cs" />
+    <Compile Include="dao\ServiceDAO.cs" />
+    <Compile Include="DefaultLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fACTURE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fACTURE.Designer.cs">
+      <DependentUpon>fACTURE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDefaultLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDefaultLayout.Designer.cs">
+      <DependentUpon>FormDefaultLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormEmploye.Designer.cs">
+      <DependentUpon>FormEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormFicheLavage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormFicheLavage.Designer.cs">
+      <DependentUpon>FormFicheLavage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormPrincipale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormPrincipale.Designer.cs">
+      <DependentUpon>FormPrincipale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\FormService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\FormService.Designer.cs">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="client.resx">
+      <DependentUpon>client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultLayout.resx">
+      <DependentUpon>DefaultLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fACTURE.resx">
+      <DependentUpon>fACTURE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDefaultLayout.resx">
+      <DependentUpon>FormDefaultLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormEmploye.resx">
+      <DependentUpon>FormEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormFicheLavage.resx">
+      <DependentUpon>FormFicheLavage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormPrincipale.resx">
+      <DependentUpon>FormPrincipale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\FormService.resx">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20181007_110549.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20181007_1105491.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_my_pressingp.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
